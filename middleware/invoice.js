@@ -1,5 +1,4 @@
 import Invoice from './../model/invoice.js';
-import { mongoose } from 'mongoose';
 
 
 export const getInvoiceById = (req, res, next) => {
