@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import express from "express";
 import * as dotEnv from 'dotenv'
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import { router as invoiceRouter} from "./routes/invoice.js";
 
 // Connecting to DB
@@ -15,6 +16,7 @@ dotEnv.config() // to ger environment variables
 
 
 // middlewares
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
